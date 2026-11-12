@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+<meta name="description" content="Personal profile page">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#050505;--card:rgba(255,255,255,.055);--border:rgba(255,255,255,.11);
+  --text:#f5f5f5;--muted:#9b9b9b;--accent:#fff;
+}
+body{
+  min-height:100vh;background:
+  radial-gradient(circle at 50% 0%,rgba(255,255,255,.09),transparent 38%),
+  linear-gradient(145deg,#030303,#0a0a0a 55%,#020202);
+  color:var(--text);font-family:Inter,Arial,sans-serif;
+  display:flex;align-items:center;justify-content:center;padding:28px;
+}
+.container{width:100%;max-width:720px}
+.card{
+  position:relative;overflow:hidden;background:var(--card);
+  border:1px solid var(--border);border-radius:28px;
+  padding:42px 34px;backdrop-filter:blur(22px);
+  box-shadow:0 30px 90px rgba(0,0,0,.55);
+}
+.glow{position:absolute;width:280px;height:280px;border-radius:50%;
+background:rgba(255,255,255,.07);filter:blur(80px);top:-170px;left:50%;transform:translateX(-50%);pointer-events:none}
+.profile{text-align:center;position:relative}
+.avatar{
+  width:112px;height:112px;border-radius:50%;object-fit:cover;
+  border:2px solid rgba(255,255,255,.8);padding:3px;background:#111;
+  margin-bottom:20px;
+}
+.name{font-size:32px;font-weight:800;letter-spacing:-1px}
+.role{color:var(--muted);margin-top:8px;font-size:15px}
+.bio{max-width:540px;margin:20px auto 0;color:#c8c8c8;line-height:1.7;font-size:14px}
+.links{display:grid;gap:12px;margin-top:30px}
+.link{
+  display:flex;align-items:center;gap:14px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:16px;
+  background:rgba(255,255,255,.035);color:#fff;text-decoration:none;
+  transition:.2s ease;
+}
+.link:hover{transform:translateY(-2px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3)}
+.icon{width:38px;height:38px;border-radius:11px;background:#fff;color:#000;
+display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.info{text-align:left;flex:1}.label{font-size:12px;color:#8e8e8e}.value{font-size:14px;margin-top:3px}
+.arrow{color:#777;font-size:20px}
+.footer{text-align:center;color:#666;font-size:11px;margin-top:28px;letter-spacing:1px}
+@media(max-width:520px){
+ body{padding:15px}.card{padding:32px 20px;border-radius:22px}
+ .name{font-size:27px}.avatar{width:96px;height:96px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <main class="card">
+    <div class="glow"></div>
+
+    <!-- ===== PROFILE IMAGE ===== -->
+    <!-- Replace profile.jpg with your own image -->
+    <section class="profile">
+      <img class="avatar" src="profile.jpg" alt="Profile">
+
+      <!-- ===== EDIT YOUR INFORMATION HERE ===== -->
+      <h1 class="name">YOUR NAME</h1>
+      <p class="role">YOUR ROLE / PROFESSION</p>
+      <p class="bio">
+        Write your short introduction here. You can put your work,
+        skills, server, company, contact information, or anything else here.
+      </p>
+    </section>
+
+    <!-- ===== LINKS ===== -->
+    <!-- Duplicate or remove these blocks as needed -->
+    <div class="links">
+
+      <a class="link" href="https://example.com" target="_blank">
+        <div class="icon">W</div>
+        <div class="info">
+          <div class="label">WEBSITE</div>
+          <div class="value">Your Website</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link" href="https://discord.com" target="_blank">
+        <div class="icon">D</div>
+        <div class="info">
+          <div class="label">DISCORD</div>
+          <div class="value">Your Discord</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link" href="https://github.com" target="_blank">
+        <div class="icon">G</div>
+        <div class="info">
+          <div class="label">GITHUB</div>
+          <div class="value">Your GitHub</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+      <a class="link" href="mailto:you@example.com">
+        <div class="icon">@</div>
+        <div class="info">
+          <div class="label">EMAIL</div>
+          <div class="value">you@example.com</div>
+        </div>
+        <div class="arrow">›</div>
+      </a>
+
+    </div>
+
+    <div class="footer">SCAN • CONNECT • DISCOVER</div>
+  </main>
+</div>
+</body>
+</html>
